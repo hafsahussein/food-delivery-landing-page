@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@400;700&display=swap');
+:root{
+    --primary-color:#FD9B00;
+    --lighter-orange:rgba(255, 176, 49, 0.2);
+}
+/* general */
+ *{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Andika New Basic', sans-serif;
+    font-weight: 400;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+h1, h2, h4 {
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 55px;
+}
+nav, header, section{
+    padding:0 80px;
+}
+p{
+    color:rgb(133, 93, 126);
+}
+button{
+    cursor: pointer;
+    display: block;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 8px;
+    width: 180px;
+    max-width: 90%;
+    margin-top: 40px;
+    color: whitesmoke;
+    font-size: 20px;
+    box-shadow: 5px 7px 6px 0px rgba(255,176,49,0.29);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+/* Nav section */
+nav{
+    margin-top: 40px;
+}
+nav ul{
+    justify-self: center;
+    justify-content: center;
+    padding: 0;
+    margin-top:-7px ;
+  }
+  
+  nav li{
+      margin: 0 25px;
+  }
+
+  .logo i, .logo span{
+      color: var(--primary-color);
+  }
+  .logo h3{
+      margin: 0;
+      font-size: 30px;
+      font-weight: 700;
+      margin-top:-15px ;
+  }
+  .menu-list li:hover::after{
+    display: block;
+    width: 40px;
+    content: "";
+    border-bottom: 3px solid var(--primary-color);
+    animation: width 0.3;
+}
+@keyframes width{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 20px;
+    }
+    100%{
+        width: 40px;
+    }
+}
+  nav .buttons-container{
+      display: flex;
+      justify-content: space-between;
+      }
+      .buttons-container label,
+     .buttons-container .cart {
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        cursor: pointer;
+        margin: 0 8px;
+        color: whitesmoke;
+    }
+    .buttons-container 
+    .search-bar-container{
+        position: relative;
+    }
+      .buttons-container i {
+        font-size: 20px;
+       }
+       .buttons-container input, 
+       .buttons-container label{
+        transition: 0.4s;
+       }
+       .buttons-container input{
+            border: none;
+            background: none;
+            outline: none;
+            position: absolute;
+            transform: translateX(-100%);
+            padding: 0;
+            font-size: 16px;
+            line-height: 30px;
+            width: 0px;
+            font-weight: bold;
+            border-radius: 10px;
+       }
+       
+       .search-bar-container:hover > input {
+        width: 150px;
+        padding: 6px;
+        border: 2px solid var(--primary-color);
+       }
+
+       /*hero section  */
+       .hero-section{
+           margin-top: 70px;
+       }
+       .hero-section div{
+           max-width: 50%;
+       }
+       .hero-section h1{
+           font-size: 40px;
+       }
+       .hero-section h1 span{
+           font-weight: 700;
+           color: var(--primary-color);
+       }
+       .hero-section button{
+           display: flex;
+            justify-content: center;
+            align-items: center;
+       }
+       .hero-section .image{
+           align-self: center;
+       }
+       button i{
+           margin-left: 15px;
+       }
+       /* Break fast section */
+       .break-fast-section{
+           margin-top: 70px;
+       }
+       .break-fast-section ul{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 30px;
+       }
+
+       .break-fast-section li{
+        grid-column: span 3;
+        height: 120px;
+        margin-top: 20px;
+        padding: 10px;
+        background-color:var(--lighter-orange) ;
+        border-radius: 20px;
+        box-shadow: 5px 7px 6px 0px rgba(255,176,49,0.29);
+       }
+       .break-fast-section a{
+        display: flex;
+        justify-content: space-around;
+        height: 80%;
+        transition: all 0.4s;
+       }
+       .break-fast-section li:hover {
+           background-color: var(--primary-color);
+       }
+       .break-fast-section li:hover >a{
+           color: whitesmoke;
+       }
+       .break-fast-section span{
+           align-self: center;
+       }
+       .break-fast-section img{
+           max-width: 50%;
+       }
+       /* healthy food section */
+       .healthy-food-section{
+        margin-top: 70px;
+        align-items: center;
+       }
+       .healthy-food-section h4{
+           font-size: 40px;
+       }
+       .healthy-food-section div{
+        max-width: 45%;
+    }
+/* Services section */
+.services{
+    display: flex;
+    margin-top: 70px;
+
+}
+.service{
+    width: 30%;
+    margin:0 20px;
+    background-color: var(--lighter-orange);
+    text-align: center;
+    padding: 45px;
+    border-radius: 50%;
+    box-shadow: 5px 7px 6px 0px rgba(255,176,49,0.29);
+}
+.services p{
+    font-size: 14px;
+}
+
+.service img{
+    height: 100px;
+    width: 100px;
+}
+
+/* popular dishes section */
+.popular-dishes{
+    margin-top: 70px;
+    background-color: var(--lighter-orange);
+    padding: 80px 40px;
+}
+.popular-dishes >h4{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+    color: #333;
+}
+.popular-dishes .cards{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(12, 1fr);
+    
+    }
+.popular-dishes .cards>div{
+    grid-column: span 3;
+    background-color: white;
+    padding: 0 10px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 7px 6px 0px rgba(255,176,49,0.29);
+}
+.popular-dishes .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -50px;
+
+}
+.popular-dishes .card-image{
+    height: 100px;
+    position: relative;
+}
+
+.popular-dishes .card-image >img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 65%;
+}
+.card-image::after{
+    content: "$65";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    color: whitesmoke;
+    background-color: var(--primary-color);
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    border-radius: 50%;
+    box-shadow: 5px 7px 6px 0px rgba(255,176,49,0.29);  
+}
+.card:nth-child(2) .card-image::after{
+    content: "$60";
+}
+.card:nth-child(3) .card-image::after{
+    content: "$70";
+}
+.card:nth-child(4) .card-image::after{
+    content: "$55";
+}
+
+.cards .stars{
+    margin-top: 20px;
+}
+.cards button{
+    margin-left:auto ;
+    margin-right: auto;
+}
+.popular-dishes button{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Our free App section */
+.free-app{
+    margin-top: 70px;
+    align-items: center;
+}
+.free-app .free-app-image{
+    height:300px;
+    padding: 20px;
+}
+.free-app >div{
+    max-width: 50%;
+}
+.free-app .stores{
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    justify-content: flex-start;
+    padding: 0;
+}
+.stores a{
+    margin: 0 8px;
+}
+.stores a img{
+    width: 120px;
+    height: 40px;
+}
+
+.free-app-image img{
+    height: 90%;
+}
+.testimonials{
+    margin-top: 70px;
+    background-color: var(--lighter-orange);
+    padding: 100px 40px;
+}
+.testimonial-cards{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 50px;
+}
+.testimonial-card{
+    grid-column: span 4;
+    background-color: white;
+    padding: 0 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.testimonial-cards 
+.testimonial-card-title{
+display: flex;
+padding: 5px;
+/* justify-content: space-between; */
+}
+.testimonial-card-title .title{
+    margin-left: 30px;
+    line-height: 35px;
+    align-self: center;
+    justify-self: center;
+}
+.testimonial-card-title .title span{
+    display: block;
+}
+.testimonial-img{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    transform: translateY(-30%);
+}
+.star{
+    width: 90px;
+    height: 18px;
+}
+.testimonials h3{
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 30px;
+    color: #333;
+}
+.testimonials button{
+margin-right: auto;
+margin-left: auto;
+}
+footer {
+    margin-top: 70px;
+    }
+    footer .footer-menu{
+        padding: 20px 100px 0;
+        margin-bottom: 20px;
+        display: grid;
+        grid-gap: 50px;
+        justify-items: center;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .footer-menu li{
+        grid-column: span 3;
+    }
+    footer .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+        background-color: var(--primary-color);
+    }
+    footer p{
+        color: black;
+    }
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .social-icons ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    
